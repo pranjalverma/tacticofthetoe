@@ -75,101 +75,10 @@ $(function() {
 		else if (string === 'tie') 
 			alert("It's a tie!");
 	}
-
-	function computerPlay() {
-        if (isGameOver()) {
-            return;
-        }
-        var i,
-            j,
-            k,
-            max,
-            chosen,
-            firstSquare,
-            count = 0;
-        turn = false;
-        updateTurn();
-        playAudio('note-high');
-        for (i = totalSquares; i--;) {
-            if (board[i] !== 0) {
-                count++;
-                if (count === 1) {
-                    firstSquare = i;
-                }
-            }
-        }
-        if (count < 2 && Math.random() > 0.2) {
-            do {
-                chosen = Math.floor(Math.random() * totalSquares);
-            } while (chosen === firstSquare);
-        } else {
-            for (i = totalSquares; i--;) {
-                for (j = totalSquares; j--;) {
-                    if (board[j] !== 0) {
-                        continue;
-                    }
-                    board[j] = 1;
-                    if (isGameOver()) {
-                        updateBoard(player2, j);
-                        return;
-                    }
-                    board[j] = 0;
-                }
-                if (board[i] !== 0) {
-                    continue;
-                }
-                board[i] = 1;
-                var min = null,
-                    temp = board.concat();
-                for (j = totalSquares; j--;) {
-                    if (temp[j] !== 0) {
-                        continue;
-                    }
-                    temp[j] = -1;
-                    for (k = win.length; k--;) {
-                        if (temp[win[k][0]] + temp[win[k][1]] + temp[win[k][2]] === -3 && Math.random() > playerChance) {
-                            board[i] = 0;
-                            board[j] = 1;
-                            updateBoard(player2, j);
-                            isGameOver();
-                            return;
-                        }
-                    }
-                    var max2 = 0,
-                        min2 = 0,
-                        tempMax = temp.concat(),
-                        tempMin = temp.concat();
-                    for (k = totalSquares; k--;) {
-                        if (tempMax[k] === 0) {
-                            tempMax[k] = 1;
-                        }
-                        if (tempMin[k] === 0) {
-                            tempMin[k] = -1;
-                        }
-                    }
-                    for (k = win.length; k--;) {
-                        if (tempMax[win[k][0]] + tempMax[win[k][1]] + tempMax[win[k][2]] === 3) {
-                            max2++;
-                        }
-                        if (tempMin[win[k][0]] + tempMin[win[k][1]] + tempMin[win[k][2]] === -3) {
-                            min2++;
-                        }
-                    }
-                    var d = max2 - min2;
-                    min = min == null ? d : (min > d ? d : min);
-                    temp[j] = 0;
-                }
-                if (max == null || max < min) {
-                    max = min;
-                    chosen = i;
-                }
-                board[i] = 0;
-            }
-        }
-        board[chosen] = 1;
-        updateBoard(player2, chosen);
-        isGameOver();
-    }
+	
+	function computer() {
+		
+	}
 
 	control();
 
