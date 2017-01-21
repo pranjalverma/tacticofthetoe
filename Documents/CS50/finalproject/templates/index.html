@@ -1,0 +1,106 @@
+<!-- 
+
+  Home page for tacticofthetoe.com
+
+  CS50 Final Project
+  author: Pranjal Verma
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- metadata: encoding, http header, and viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CS50 Final Project; 'tacticofthetoe' ">
+    <meta name="author" content="Pranjal Verma">
+
+    <!-- <link rel="icon" href="../../favicon.ico"> get icon first-->
+
+    <!-- CSS links: Bootstrap core CSS -->
+    <link type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this Bootstrap template -->
+    <link type="text/css" href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+
+    <title>tacticofthetoe</title>
+  </head>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <a href="{{ url_for('index') }}"><h3 class="masthead-brand">// tacticofthetoe</h3></a>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+                  <li><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="board">
+            <div class="box _0">
+              <div class></div>
+            </div>
+            <div class="box _1">
+              <div class></div>
+            </div>
+            <div class="box _2">
+              <div class></div>
+            </div>
+            <div class="box _3">
+              <div class></div>
+            </div>
+            <div class="box _4">
+              <div class></div>
+            </div>
+            <div class="box _5">
+              <div class></div>
+            </div>
+            <div class="box _6">
+              <div class></div>
+            </div>
+            <div class="box _7">
+              <div class></div>
+            </div>
+            <div class="box _8">
+              <div class></div>
+            </div>
+          </div>
+
+          <!-- <div class="playercount">
+            <span class="glyphicon glyphicon-user"></span>
+          </div> -->
+
+          <div class="restart">
+              <button type="button" class="btn btn-lg btn-default">Restart</button>
+          </div>
+          
+          <div class="mastfoot">
+            <div class="inner">
+              <p>CS50 final project brought to you by  <a href="http://getbootstrap.com"> Bootstrap</a> and <a href="https://www.facebook.com/Pranjal.vrma">Pranjal Verma</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static', filename='js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

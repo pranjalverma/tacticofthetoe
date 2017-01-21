@@ -1,0 +1,80 @@
+<!-- 
+
+  About page for tacticofthetoe.com
+
+  CS50 Final Project
+  author: Pranjal Verma
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- metadata: encoding, http header, and viewpoint -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CS50 Final Project; 'tacticofthetoe' ">
+    <meta name="author" content="Pranjal Verma">
+
+    <!-- <link rel="icon" href="../../favicon.ico"> get icon first-->
+
+    <!-- CSS links: Bootstrap core CSS -->
+    <link type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this Bootstrap template -->
+    <link type="text/css" href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+
+    <title>tacticofthetoe</title>
+  </head>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <a href="{{ url_for('index') }}"><h3 class="masthead-brand">// tacticofthetoe</h3></a>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="{{ url_for('index') }}">Home</a></li>
+                  <li class="active"><a href="{{ url_for('about') }}">About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <p class="lead">tacticofthetoe is an interactive web application designed for only one purpose; to challenge you with a thrilling game of tictactoe with amazing retro sound effects and animations! Hmph, well ..it's tictactoe basically.</p>
+            </br>
+            <p class="lead">This app has been built mostly using Bootstrap and Flask. Bootstrap is an open-source repository for front-end web development and Flask is a so-called "micro-framework" for building web apps using Python. Other tools used are JavaScript for ajax and virtualenv for packaging. The game itself is simple, it provides you with an option between playing against an AI or another human (if you have one close by). The game can then be played and eventually the results are displayed.</p>
+            </br>
+            <p class="lead">Enjoy! :)</p>
+          </div>
+
+          <!-- <div class="playercount">
+            <span class="glyphicon glyphicon-user"></span>
+          </div> -->
+          
+          <div class="mastfoot">
+            <div class="inner">
+              <p>CS50 final project brought to you by  <a href="http://getbootstrap.com">Bootstrap</a> and <a href="https://www.facebook.com/Pranjal.vrma">Pranjal Verma</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
